@@ -44,7 +44,7 @@ export class FormlyValidationMessage implements OnChanges {
 
   get errorMessage() {
     const fieldForm = this.field.formControl;
-    for (const error in fieldForm.errors) {
+    for (const error of fieldForm.errors) {
       if (fieldForm.errors.hasOwnProperty(error)) {
         let message = this.config.getValidatorMessage(error);
 
